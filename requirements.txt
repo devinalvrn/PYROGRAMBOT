@@ -1,4 +1,4 @@
-git+https://github.com/naya1503/pyrogram
+git+https://github.com/hakutakaid/pyrogram
 motor
 pymongo
 aiohttp
@@ -10,3 +10,4 @@ git+https://github.com/Itz-fork/py-trans.git
 python-dotenv
 prettytable
 wget
+tgcrypto
