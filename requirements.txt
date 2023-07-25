@@ -1,5 +1,5 @@
-git+https://github.com/hakutakaid/pyrogram
-git+https://github.com/hakutakaid/motor
+git+https://github.com/naya1503/pyrogram
+motor
 pymongo
 aiohttp
 pytgcalls==3.0.0.dev24
