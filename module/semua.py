@@ -23,13 +23,13 @@ add_command_help(
     ],
 )
 
-add_command_help(
-    "CURI",
-    [
-        ["curi", "untuk mencuri pap timer"],
-    ],
-
-)
+#add_command_help(
+#    "CURI",
+#    [
+#        ["curi", "untuk mencuri pap timer"],
+#    ],
+#
+#)
 add_command_help(
     "VCTOOLS",
     [
