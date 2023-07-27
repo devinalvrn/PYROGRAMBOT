@@ -22,6 +22,12 @@ add_command_help(
         ["limit", "Cek limit/batasan akun."],
     ],
 )
+add_command_help(
+    "ZOMBIES",
+    [
+        ["zombies", "Untuk Megeluarkan Akun Yang Terhapus"],
+    ],
+)
 
 #add_command_help(
 #    "CURI",
@@ -87,7 +93,7 @@ add_command_help(
     "ANTIPM",
     [
         ["pmpermit [on or off]", " -> Untuk Mengaktifkan PmPermit."],
-        ["setmspm [message or default]", " -> Untuk Mengubah Pesan PmPermit."],
+        ["setpmpermit [message or default]", " -> Untuk Mengubah Pesan PmPermit."],
         ["setblockmsg [message or default]", "-> Untuk Mengubah Pesan Blockir."],
         ["setlimit [value]", " -> Untuk Menyetting WARNING Pm Permit"],
         ["ok", " -> Untuk Menyetujui Pengguna."],

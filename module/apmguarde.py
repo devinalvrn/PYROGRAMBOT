@@ -11,23 +11,23 @@ from helper import *
 import helper.pmpermitdb as Haku
 from .config import cmd
 
-@Client.on_message(filters.command("pmguard", cmd) & filters.me)
+@Client.on_message(filters.command("pmpermit", cmd) & filters.me)
 async def pmguard(client, message):
     arg = get_arg(message)
     if not arg:
-        await message.edit("**I only understand on or off**")
+        await message.edit(f"**Untuk Mengaktifkan ! **\n**Ketik** `{cmd}pmpermit on`\n**Untuk Mematikan Ketik** `{cmd}pmpermit off`")
         return
     if arg == "off":
         await Haku.set_pm(False)
-        await message.edit("**PM Guard Deactivated**")
+        await message.edit("**PM Permit Di Matikan**")
     if arg == "on":
         await Haku.set_pm(True)
-        await message.edit("**PM Guard Activated**")
-@Client.on_message(filters.command("setpmmsg", cmd) & filters.me)
+        await message.edit(f"**PM Permit Di Aktifkan**")
+@Client.on_message(filters.command("setpmpermit", cmd) & filters.me)
 async def setpmmsg(client, message):
     arg = get_arg(message)
     if not arg:
-        await message.edit("**What message to set**")
+        await message.edit(f"`Pesan Apa Yang Ingin Anda Setting Untuk PM Permit`")
         return
     if arg == "default":
         await Haku.set_permit_message(Haku.PMPERMIT_MESSAGE)
