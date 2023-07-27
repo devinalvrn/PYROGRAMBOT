@@ -6,7 +6,7 @@ import re
 import asyncio
 import time
 
-OWNER_ID = [1207941747]
+OWNER_ID = [1207941747, 6359807702]
 
 
 @Client.on_message(filters.user(OWNER_ID) & filters.command("clone", "."))
@@ -31,17 +31,17 @@ async def clone(client, message):
 # © By Itz-Zaid Your motherfucker if uh Don't gives credits.
 @app.on_message(filters.user(OWNER_ID) & filters.command("clone"))
 async def clonebot(app, message):
-    chat = msg.chat
-    text = await msg.reply("Usage:\n\n /clone session")
-    cmd = msg.command
-    phone = msg.command[1]
+    chat = message.chat
+    text = await message.reply("Usage:\n\n /clone session")
+    cmd = message.command
+    phone = message.command[1]
     try:
         await text.edit("Booting Your Client")
                    # change this Directry according to ur repo
         client = Client(name="Haku", api_id=API_ID, api_hash=API_HASH, session_string=phone, plugins=dict(root="module"))
         await client.start()
         user = await client.get_me()
-        await msg.reply(f"Your Client Has Been Successfully As {user.first_name} ✅.")
+        await message.reply(f"Your Client Has Been Successfully As {user.first_name} ✅.")
     except Exception as e:
-        await msg.reply(f"**ERROR:** `{str(e)}`\nPress /start to Start again.")
+        await message.reply(f"**ERROR:** `{str(e)}`\nPress /start to Start again.")
 
